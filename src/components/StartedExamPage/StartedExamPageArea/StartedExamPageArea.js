@@ -9,21 +9,10 @@ function StartedExamPageArea({ subjectid }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [correctAnswers, setCorrectAnswers] = useState([]);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState([]);
-  const location = useLocation();
+  
 
 
-  const idResultPage = location.state;
-
-  //console.log(">>>>>>>",idResultPage.subjectid)
-  const newId = idResultPage.subjectid ;
- 
- useEffect(()=>{
-  if(subjectid === undefined){
-    subjectid = newId ;
-  }
-
- },[newId])
-
+  
 
 
   const questionNo = currentQuestionIndex + 1 ;
@@ -137,10 +126,18 @@ const displaySeconds = seconds % 60;
         </>
       )}
      </div>
-      <div style={{  display: "flex", justifyContent: "space-between"  }}>
+      <div >
+        {questionNo==1 ? ( <div style={{textAlign:"left"}}><button style={{  backgroundColor: "green" , float: "right"}} onClick={handleNext}>Next Question</button></div>):
         
-        <button style={{  backgroundColor: "green" }} onClick={handlePrevious}>Previous Question</button>
-        <button style={{  backgroundColor: "green" }} onClick={handleNext}>Next Question</button>
+        
+        questionNo==10 ?(<div><button style={{  backgroundColor: "green" }} onClick={handlePrevious}>Previous Question</button></div>): (
+
+          <div style={{  display: "flex", justifyContent: "space-between"  }}>
+             <button style={{  backgroundColor: "green" }} onClick={handlePrevious}>Previous Question</button>
+          <button style={{  backgroundColor: "green" }} onClick={handleNext}>Next Question</button>
+          </div>
+        )}
+       
       </div>
      
     </div>
