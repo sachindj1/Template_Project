@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link } from 'react-router-dom';
 
 const RegisterArea = () => {
   const [name, setName] = useState('');
@@ -136,7 +136,7 @@ const RegisterArea = () => {
           <button type="submit" style={buttonStyle}>
             Register
           </button>
-          <li><a class="getstarted scrollto"  onClick={handleHome}>Home</a></li>
+          <div style={{textAlign: "center" ,color:"black" ,fontWeight: 'bold'}}> <Link to="/">Home</Link></div>
         </form>
       </div>
     </div>

@@ -38,7 +38,7 @@ function Navbar() {
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a  onClick={handleHome}>Arsha</a></h1>
+      <h1 class="logo me-auto"><a  onClick={handleHome}>MTesT</a></h1>
      
        <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
 

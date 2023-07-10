@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation , useNavigate } from 'react-router-dom';
 
 function StartedExamPageArea({ subjectid }) {
   const [seconds, setSeconds] = useState(0);
@@ -9,6 +9,20 @@ function StartedExamPageArea({ subjectid }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [correctAnswers, setCorrectAnswers] = useState([]);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState([]);
+  const location = useLocation();
+
+
+  const idResultPage = location.state;
+
+  //console.log(">>>>>>>",idResultPage.subjectid)
+  const newId = idResultPage.subjectid ;
+ 
+ useEffect(()=>{
+  if(subjectid === undefined){
+    subjectid = newId ;
+  }
+
+ },[newId])
 
 
 
@@ -53,7 +67,10 @@ const displaySeconds = seconds % 60;
       currentQuestionIndex,
       selectedOptions,
       correctAnswers,
-      isAnswerCorrect
+      isAnswerCorrect,
+      subjectid,
+      minutes,
+      displaySeconds
     };
     navigate("/resultpage", { state: { selectedAll } });
   };

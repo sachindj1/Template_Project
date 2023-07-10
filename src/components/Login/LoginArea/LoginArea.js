@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link } from 'react-router-dom';
 import axios from 'axios';
 
 const LoginArea = () => {
@@ -73,7 +73,9 @@ const LoginArea = () => {
             />
           </div>
           <button type="submit" style={buttonStyle}>Login</button>
+        
         </form>
+        <div style={{textAlign: "center"}}> <Link to="/register">new User ?</Link></div>
       </div>
     </div>
   );

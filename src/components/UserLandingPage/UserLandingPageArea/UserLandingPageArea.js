@@ -15,7 +15,7 @@ function UserLandingPageArea() {
       navigate('/exampage', { state: { subjectID } });
     }
     else{
-      navigate('/register')
+      navigate('/login')
     }
    
   }
