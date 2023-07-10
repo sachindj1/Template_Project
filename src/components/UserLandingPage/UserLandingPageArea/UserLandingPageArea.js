@@ -6,9 +6,18 @@ function UserLandingPageArea() {
   const [subjects, setSubjects] = useState([]);
 
   const navigate = useNavigate();
+  const userIDD = localStorage.getItem('userID' );
 
   function handlSubject(subjectID) {
-    navigate('/exampage', { state: { subjectID } });
+
+    if(  userIDD ){
+
+      navigate('/exampage', { state: { subjectID } });
+    }
+    else{
+      navigate('/register')
+    }
+   
   }
 
   // Fetch list of subjects from backend

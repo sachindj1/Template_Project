@@ -8,6 +8,7 @@ function ResultPageArea({ Result }) {
   const passCount = isAnswerCorrect.filter((value) => value).length;
 
   const isPass = passCount >= passThreshold;
+  
 
   return (
     <div >
