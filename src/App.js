@@ -7,6 +7,7 @@ import UserLandingPage from './components/UserLandingPage/UserLandingPage'
 import ExamPage from './components/ExamPage/ExamPage'
 import ResultPage from './components/ResultPage/ResultPage'
 import StartedExamPage from './components/StartedExamPage/StartedExamPage'
+import AdminPage from './components/AdminPage/AdminPage'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path='/exampage' element={ <ExamPage />} />
       <Route path='/resultpage' element={ <ResultPage />} />
       <Route path='/startedexam' element={ <StartedExamPage />} />
+      <Route path='/admin' element={<AdminPage />} />
      </Routes>
        
 
