@@ -43,7 +43,7 @@ function UserLandingPageArea() {
 
     justifyContent: 'center',
     minHeight: '100vh',
-    backgroundColor: '#87CEEB',
+    backgroundColor: '#37517e',
   };
 
   const buttonContainerStyle = {
@@ -51,8 +51,8 @@ function UserLandingPageArea() {
   };
 
   const buttonStyle = {
-    backgroundColor: '#f2f2f2',
-    color: '#333',
+    backgroundColor: 'green',
+    color: 'white',
     padding: '10px 20px',
     border: 'none',
     borderRadius: '4px',
@@ -64,7 +64,7 @@ function UserLandingPageArea() {
   return (
     <div>
       <div style={containerStyle}>
-        <h2>Select Subject</h2>
+        <h2 style={{color:"white"}}>Select Subject</h2>
         <div style={buttonContainerStyle}>
           {subjects.map((subject) => (
             <button

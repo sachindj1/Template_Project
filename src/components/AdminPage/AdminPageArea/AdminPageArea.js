@@ -11,7 +11,7 @@ function AdminPageArea() {
 
     if(  userIDD ){
 
-      navigate('/', { state: { subjectID } });
+      navigate('/admin', { state: { subjectID } });
     }
     else{
       navigate('/login')

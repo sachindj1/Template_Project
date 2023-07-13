@@ -39,8 +39,8 @@ function ExamPageArea({subjectID}) {
 
   return (
     <div style={containerStyle}>
-    {subDetails ? (<><h2 style={{textAlign : 'center'}}>Exam Details</h2>
-    <h2 style={{textAlign : 'center'}}> {subDetails}
+    {subDetails ? (<><h2 style={{textAlign : 'center' , color:"white"}}>Exam Details</h2>
+    <h2 style={{textAlign : 'center', color:"white"}}> {subDetails}
                                    </h2>
      <button style={buttonStyle} onClick={handleExam}>Start Exam</button>
      </>) : (<><h2 style={{textAlign : 'center'}}>Exam Details</h2></>)}
@@ -55,11 +55,12 @@ const containerStyle = {
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '100vh',
-    backgroundColor: '#87CEEB',
+    backgroundColor: '#37517e',
   };
   
   const buttonStyle = {
     backgroundColor: 'green',
+    color: 'white',
     padding: '10px 20px',
     border: 'none',
     borderRadius: '4px',
