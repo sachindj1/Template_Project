@@ -40,8 +40,17 @@ function ExamPageArea({subjectID}) {
   return (
     <div style={containerStyle}>
     {subDetails ? (<><h2 style={{textAlign : 'center' , color:"white"}}>Exam Details</h2>
-    <h2 style={{textAlign : 'center', color:"white"}}> {subDetails}
-                                   </h2>
+    {/* <h2 style={{textAlign : 'center', color:"white"}}> {subDetails}
+                                   </h2> */}
+       <ul style={{ color:"white"}}> 
+       <li> <h2>Paper  includes total 10 questions</h2></li>
+       <li> <h2>Read and understand each question before attempting to solve it.</h2></li>
+    <li><h2>Treat the mock test as if it were the real exam .</h2></li>
+     <li> <h2>Double-check your answers before submitting the test.</h2></li>
+    <li><h2>Treat the mock test as if it were the real exam</h2></li>
+
+
+ </ul>
      <button style={buttonStyle} onClick={handleExam}>Start Exam</button>
      </>) : (<><h2 style={{textAlign : 'center'}}>Exam Details</h2></>)}
     </div>
