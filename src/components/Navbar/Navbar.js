@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 function Navbar() {
     const navigate = useNavigate();
     const user = localStorage.getItem('username');
+    const user_admin = localStorage.getItem('username_admin');
 
     function handleLogin(){
         navigate('/login')
@@ -24,6 +25,7 @@ function Navbar() {
         // Clear user data from local storage
         localStorage.removeItem('username');
         localStorage.removeItem('userID');
+        localStorage.removeItem('username_admin');
     
     
         // Perform any additional cleanup or redirection as needed
@@ -47,7 +49,7 @@ function Navbar() {
           <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/">About</a></li>
           <li><a class="nav-link scrollto" href="/">Services</a></li>
-          <li><a class="nav-link   scrollto" href="/">Portfolio</a></li>
+          <li><a class="nav-link   scrollto" href="/admin">Admin</a></li>
           <li><a class="nav-link scrollto" href="/">Team</a></li>
           <li class="dropdown"><a href="/"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -67,7 +69,7 @@ function Navbar() {
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="/">Contact</a></li>
-          {user ? ( <li><a class="getstarted scrollto" style={{color : "red"}} onClick={handleLogout}>LogOut</a></li>):( <ul><li><a class="getstarted scrollto"  onClick={handleLogin}>Login</a></li>
+          {user ? ( <li><a class="getstarted scrollto" style={{color : "red"}} onClick={handleLogout}>LogOut</a></li>): user_admin ?( <li><a class="getstarted scrollto" style={{color : "red"}} onClick={handleLogout}>LogOut</a></li>):( <ul><li><a class="getstarted scrollto"  onClick={handleLogin}>Login</a></li>
           
           <li><a class="getstarted scrollto"  onClick={handleRegister}>Register</a></li></ul>
           )}

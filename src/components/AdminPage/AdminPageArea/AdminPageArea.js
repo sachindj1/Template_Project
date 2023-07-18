@@ -5,16 +5,21 @@ function AdminPageArea() {
     const [subjects, setSubjects] = useState([]);
 
     const navigate = useNavigate();
-    const userIDD = localStorage.getItem('userID' );
+    const username_admin = localStorage.getItem('username_admin' );
+    const username = localStorage.getItem('username' );
    
   function handlSubject(subjectID) {
 
-    if(  userIDD ){
+    if(  username_admin ){
 
-      navigate('/admin', { state: { subjectID } });
+      navigate('/addquestion', { state: { subjectID } });
     }
     else{
-      navigate('/login')
+       if(username){
+        alert("only admin can do changes")
+       }else{
+        navigate('/login')
+       }
     }
    
   }
@@ -41,7 +46,7 @@ function AdminPageArea() {
         <div style={containerStyle}>
 
       <div style={contentStyle}>
-      <h2 style={{textAlign:"center"}}>Select Subject</h2>
+      <h2 style={{textAlign:"center" }}>Select Subject</h2>
         <div style={buttonContainerStyle}>
           {subjects.map((subject) => (
             <button
@@ -81,8 +86,8 @@ const containerStyle = {
 
 
   const buttonStyle = {
-    backgroundColor: '#f2f2f2',
-    color: '#333',
+    backgroundColor: 'green',
+    color: 'white',
     padding: '10px 20px',
     border: 'none',
     borderRadius: '4px',

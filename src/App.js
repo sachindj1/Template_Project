@@ -8,6 +8,7 @@ import ExamPage from './components/ExamPage/ExamPage'
 import ResultPage from './components/ResultPage/ResultPage'
 import StartedExamPage from './components/StartedExamPage/StartedExamPage'
 import AdminPage from './components/AdminPage/AdminPage'
+import AddQestionsPage from './components/AddQestionsPage/AddQestionsPage'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path='/resultpage' element={ <ResultPage />} />
       <Route path='/startedexam' element={ <StartedExamPage />} />
       <Route path='/admin' element={<AdminPage />} />
+      <Route path='/addquestion' element={<AddQestionsPage />} />
      </Routes>
        
 

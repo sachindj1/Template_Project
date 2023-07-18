@@ -31,7 +31,7 @@ const LoginArea = () => {
 
         navigate("/");
       }else{
-        localStorage.setItem('username', JSON.stringify(response.data.admin.first_name));
+        localStorage.setItem('username_admin', JSON.stringify(response.data.admin.first_name));
         localStorage.setItem('userID', response.data.admin.idadmin);
 
         navigate("/admin");

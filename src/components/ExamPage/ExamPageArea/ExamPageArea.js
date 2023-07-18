@@ -39,9 +39,10 @@ function ExamPageArea({subjectID}) {
 
   return (
     <div style={containerStyle}>
-    {subDetails ? (<><h2 style={{textAlign : 'center' , color:"white"}}>Exam Details</h2>
+    {subDetails ? (<><h1 style={{textAlign : 'center' , color:"white"}}>Exam Details</h1>
     {/* <h2 style={{textAlign : 'center', color:"white"}}> {subDetails}
                                    </h2> */}
+                                   <br></br>
        <ul style={{ color:"white"}}> 
        <li> <h2>Paper  includes total 10 questions</h2></li>
        <li> <h2>Read and understand each question before attempting to solve it.</h2></li>
